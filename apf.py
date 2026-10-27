@@ -21,7 +21,7 @@ except ImportError:
     sys.exit(1)
 
 # ---------------- Version ----------------
-VERSION = "1.2"
+VERSION = "1.0"
 
 # ---------------- Update ----------------
 # Point this at your real GitHub repo (user/repo) to enable `apf --update`.
@@ -40,13 +40,17 @@ def c(text):
 
 
 def banner():
-    """Rebuilt on every run so colors are freshly randomized each time."""
+    """
+    Big block-letter 'APF' logo, printed in one shot (no typing delay) so it
+    shows up fast the moment the script runs. Colors re-randomize every run.
+    """
     lines = [
-        '   _____  _____  ______ ',
-        '  /  _  \\ \\   / | ____|',
-        ' /  /_\\  \\  \\ /  |  __| ',
-        '/    |    \\  ||   | |     ',
-        '\\___ | _  / _ ||_  |_|     ',
+        " █████╗ ██████╗ ███████╗",
+        "██╔══██╗██╔══██╗██╔════╝",
+        "███████║██████╔╝█████╗  ",
+        "██╔══██║██╔═══╝ ██╔══╝  ",
+        "██║  ██║██║     ██║     ",
+        "╚═╝  ╚═╝╚═╝     ╚═╝     ",
     ]
     out = "\n" + "\n".join(c(line) for line in lines) + "\n"
     out += f"{BOLD}{c('      Admin Panel Finder')}{RESET}\n"
